@@ -1,0 +1,22 @@
+:local {
+  .container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+  }
+  .row {
+    display: flex;
+    column-gap: 32px;
+  }
+
+  .title {
+    color: var(--color-white-alpha);
+    font-weight: 400;
+  }
+}
