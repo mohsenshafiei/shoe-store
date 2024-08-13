@@ -36,13 +36,39 @@ Happy Hacking :)
 
 ### Installation
 
+#### Step 1: Clone The Repository
+
+To get started, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/mohsenshafiei/shoe-store.git
+cd shoe-store
+```
+
+#### Step 2: Setup Environment Variables
+
+Before starting the project, you need to configure your environment variables. Rename `.env.example` to `.env` and if you want you can adjust the values.
+
+#### Step 3: Setup websocketd
+
 This projects uses the popular library `websocketd` to send messages.
 
 If you're on a Mac, you can install `websocketd` using [Homebrew](http://brew.sh/). Just run
 
 <pre align="center">brew install <b>websocketd</b></pre>
 
-#### Inventory Server
+#### Step 4: Inventory Server Installation and Running
+
+First we need to install `Ruby`. If you're on a Mac, you can install `ruby` using [Homebrew](http://brew.sh/). Just run
+
+<pre align="center">brew install <b>ruby</b></pre>
+
+Then install the following packages
+
+```
+gem install faye-websocket
+gem install eventmachine
+```
 
 Your WebSocket Server is the tap that aggregates inventories from all stores.
 
@@ -54,7 +80,7 @@ Run the following to start tapping into the inventory events.
 
 You now have an active connection to their stores opened on port 8080.
 
-#### Frontend Installation
+#### Step 5: Frontend Installation and Running
 
 <pre align="center">pnpm <b>i</b></pre>
 
