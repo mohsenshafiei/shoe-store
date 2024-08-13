@@ -1,6 +1,8 @@
 #!/usr/bin/ruby
 
 require 'json'
+require 'faye/websocket'
+require 'eventmachine'
 
 STDOUT.sync = true
 
@@ -15,7 +17,16 @@ loop do
       store: STORE_STORES.sample,
       model: SHOES_MODELS.sample,
       inventory: INVENTORY.sample,
+      timeStamp: (Time.now.to_f * 1000).to_i
     }, quirks_mode: true)
   end
   sleep 1
 end
+
+EM.run {
+  ws = Faye::WebSocket::Client.new('ws://localhost:8080/')
+
+  ws.on :message do |event|
+    p JSON.parse(event.data)
+  end
+}
