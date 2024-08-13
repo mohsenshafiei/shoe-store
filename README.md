@@ -1,4 +1,4 @@
-<h2 align="center">Shoe Store</h2>
+<h2 align="center">🥾 Shoe Store</h2>
 
 ### Synopsis
 
