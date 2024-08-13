@@ -1,0 +1,17 @@
+:local {
+  @keyframes blink {
+    0% {
+      background-color: var(--color-indigo);
+    }
+    50% {
+      background-color: var(--color-primary);
+    }
+    100% {
+      background-color: var(--color-indigo);
+    }
+  }
+
+  .blink {
+    animation: blink 0.5s ease-in-out;
+  }
+}
