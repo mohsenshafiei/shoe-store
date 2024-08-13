@@ -1,6 +1,6 @@
-# Shoe Store
+<h2 align="center">🥾 Shoe Store</h2>
 
-## Synopsis
+### Synopsis
 
 Aldo Shoes is having a huge flash sale online. You provide support to the inventory department. They want to react real-time to various inventory problems as they arise.
 
@@ -16,7 +16,7 @@ You adjust the inventory whenever a new sale is completed. The return value incl
 
 `ALDO Ste-Catherine` store sold a pair of `ADERI` shoes. `ALDO Ste-Catherine` now has 10 pairs of `ADERI` left.
 
-## Goal
+### Goal
 
 **Design an interface that would allow the inventory department to monitor Aldo's stores and shoes inventory.**
 
@@ -34,19 +34,41 @@ Share your repository with us when you’re done.
 
 Happy Hacking :)
 
-## Installation
+### Installation
+
+#### Step 1: Clone The Repository
+
+To get started, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/mohsenshafiei/shoe-store.git
+cd shoe-store
+```
+
+#### Step 2: Setup Environment Variables
+
+Before starting the project, you need to configure your environment variables. Rename `.env.example` to `.env` and if you want you can adjust the values.
+
+#### Step 3: Setup websocketd
 
 This projects uses the popular library `websocketd` to send messages.
 
-If you're on a Mac, you can install `websocketd` using [Homebrew](http://brew.sh/). Just run `brew install websocketd`. For other operating systems, or if you don't want to use Homebrew, check out the link below.
+If you're on a Mac, you can install `websocketd` using [Homebrew](http://brew.sh/). Just run
 
-**[Download for Linux, OS X and Windows](https://github.com/joewalnes/websocketd/wiki/Download-and-install)**
+<pre align="center">brew install <b>websocketd</b></pre>
 
-Note that a Ubuntu 64-bit version is already bundled here `bin/websocketd` for convenience.
+#### Step 4: Inventory Server Installation and Running
 
-## Getting Started
+First we need to install `Ruby`. If you're on a Mac, you can install `ruby` using [Homebrew](http://brew.sh/). Just run
 
-### Inventory Server
+<pre align="center">brew install <b>ruby</b></pre>
+
+Then install the following packages
+
+```
+gem install faye-websocket
+gem install eventmachine
+```
 
 Your WebSocket Server is the tap that aggregates inventories from all stores.
 
@@ -54,55 +76,14 @@ You can run it directly from your own machine.
 
 Run the following to start tapping into the inventory events.
 
-```
-(bin/)websocketd --port=8080 ruby inventory.rb
-```
+<pre align="center">websocketd --port=8080 ruby server/inventory.rb</pre>
 
 You now have an active connection to their stores opened on port 8080.
 
-### Start listening on each event
+#### Step 5: Frontend Installation and Running
 
-Listen and react on each event using a WebSocket client.
+<pre align="center">pnpm <b>i</b></pre>
 
-Various implementations are at your disposal. Whatever floats your boat.
+and then
 
-They all work the same way. Provide a method or a block to be executed whenever a new event occurs.
-
-Here are two examples for our favorite languages:
-
-#### Javascript
-
-Open a console on a non-secured page:
-
-```
-var ws = new WebSocket('ws://localhost:8080/');
-
-ws.onmessage = function(event) {
-  console.log(event.data);
-};
-```
-
-#### Ruby
-
-##### Installation
-
-```
-gem install faye-websocket
-gem install eventmachine
-```
-
-##### Example
-
-```
-require 'faye/websocket'
-require 'eventmachine'
-require 'json'
-
-EM.run {
-  ws = Faye::WebSocket::Client.new('ws://localhost:8080/')
-
-  ws.on :message do |event|
-    p JSON.parse(event.data)
-  end
-}
-```
+<pre align="center">pnpm <b>run dev</b></pre>

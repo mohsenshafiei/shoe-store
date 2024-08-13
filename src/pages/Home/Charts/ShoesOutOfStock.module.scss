@@ -1,0 +1,22 @@
+:local {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-white);
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+  }
+
+  .lastUpdate {
+    font-size: 12px;
+    padding: 8px 16px;
+    background-color: var(--color-primary);
+    color: var(--color-white-alpha);
+    border-top: 1px solid var(--color-secondary);
+    width: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
