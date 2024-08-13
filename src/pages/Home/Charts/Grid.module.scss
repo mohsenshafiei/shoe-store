@@ -1,0 +1,44 @@
+:local {
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+  }
+
+  .inventoryHeatmap {
+    overflow: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    table-layout: fixed;
+    width: 100%;
+    background-color: var(--color-primary);
+    border-radius: 8px;
+  }
+
+  .legendsContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 48px;
+    border-bottom: 1px solid var(--color-secondary);
+    border-left: 1px solid var(--color-secondary);
+    border-right: 1px solid var(--color-secondary);
+  }
+
+  .lastUpdate {
+    font-size: 12px;
+    padding: 8px 16px;
+    background-color: var(--color-primary);
+    color: var(--color-white-alpha);
+    border-top: 1px solid var(--color-secondary);
+  }
+}

@@ -1,0 +1,32 @@
+:local {
+  .container {
+    min-height: 400px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 32px;
+    color: var(--color-white);
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+  }
+
+  .legendsContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 48px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-secondary);
+  }
+
+  .tooltip {
+    color: var(--color-white-alpha);
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-primary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+}

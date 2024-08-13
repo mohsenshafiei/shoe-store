@@ -1,0 +1,24 @@
+:local {
+  .container {
+    min-height: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+    flex-direction: column;
+    row-gap: 32px;
+    color: var(--color-white);
+    border: 1px solid var(--color-secondary);
+    padding: 18px;
+    border-radius: 8px;
+  }
+
+  .tooltip {
+    color: var(--color-white-alpha);
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-primary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+}

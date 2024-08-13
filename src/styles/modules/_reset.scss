@@ -1,0 +1,243 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  --font-family-default: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue',
+    'Helvetica', 'Arial', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 25px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) var(--color-primary);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: var(--color-white-alpha);
+  font-weight: bold;
+  padding: 0.5rem;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+tr {
+  border-bottom: 1px solid var(--color-secondary);
+  border-left: 1px solid var(--color-secondary);
+  border-right: 1px solid var(--color-secondary);
+}
+
+td {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.5rem;
+}
+
+tr:nth-child(even) td {
+  background-color: var(--color-primary);
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border-top: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
+}
+
+tr:hover {
+  border-left: 1px solid var(--color-white);
+  border-right: 1px solid var(--color-white);
+}
+
+tr:first-child {
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+tr:first-child:hover {
+  border-left: 1px solid var(--color-secondary);
+  border-right: 1px solid var(--color-secondary);
+}
+
+tbody tr:nth-child(1):hover {
+  border-top: 1px solid var(--color-white);
+  border-left: 1px solid var(--color-white);
+  border-right: 1px solid var(--color-white);
+}
+
+tbody tr:nth-child(1):hover td {
+  border-top: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
+}
+
+th:first-child {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+td:first-child {
+  text-align: left;
+  padding-left: 1rem;
+}

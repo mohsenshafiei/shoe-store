@@ -1,0 +1,36 @@
+.navbar {
+  color: black;
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+  height: 64px;
+  justify-content: space-between;
+  padding: 32px 64px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-primary);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+  justify-content: space-between;
+}
+
+.link {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #c472fb;
+}
+
+.main {
+  font-size: 18px;
+  color: #c472fb;
+}
