@@ -1,0 +1,37 @@
+:local {
+  .legendsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 12px;
+    background-color: var(--color-primary);
+  }
+
+  .legendsLabel {
+    color: var(--color-white-alpha);
+    font-size: 14px;
+  }
+
+  .legends {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 12px;
+  }
+
+  .legendColor {
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid var(--color-secondary);
+  }
+}
