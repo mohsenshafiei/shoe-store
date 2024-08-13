@@ -4,6 +4,7 @@ import 'dotenv/config';
 // Plugins
 import removeConsole from 'vite-plugin-remove-console';
 import { createHtmlPlugin } from 'vite-plugin-html';
+import tsconfigPaths from 'vite-tsconfig-paths';
 import Inspect from 'vite-plugin-inspect';
 import { VitePWA } from 'vite-plugin-pwa';
 import react from '@vitejs/plugin-react';
@@ -15,7 +16,23 @@ export default defineConfig({
     minify: 'esbuild', // or 'terser'
     sourcemap: true,
   },
+  css: {
+    modules: {
+      generateScopedName: '[path][name]__[local]___[hash:base64:5]',
+    },
+  },
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@components': '/src/components',
+      '@pages': '/src/pages',
+      '@stores': '/src/stores',
+      '@types': '/src/types',
+      '@utils': '/src/utils',
+    },
+  },
   plugins: [
+    tsconfigPaths(),
     react(),
     svgr(),
     removeConsole(),
