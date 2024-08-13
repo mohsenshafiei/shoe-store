@@ -1,0 +1,20 @@
+:local {
+  .container {
+    min-height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 32px;
+    color: var(--color-white);
+    border: 1px solid var(--color-secondary);
+    padding: 18px;
+    border-radius: 8px;
+  }
+
+  .title {
+    color: var(--color-white-alpha);
+    font-weight: 400;
+  }
+}
